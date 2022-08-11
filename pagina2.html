@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Processing</title>
+    <script src="processing.js"></script>
+  </head>
+  <body>
+    <li>
+        <a class="item" href="Index.html">Inicio</a>
+    
+    <li>
+        <a class="item" href="pagina1.html">pagina uno</a>
+            <li>
+        <a class="item" href="pagina2.html">pagina dos</a>
+            <li>
+        <a class="item" href="pagina3.html">pagina tres</a>
+            <li>
+        <a class="item" href="pagina4.html">pagina cuatro </a>
+    <script type="text/processing">
+  PImage Img;
+int x=20;
+int y=20;
+void setup()
+{
+        size(640, 360);
+}
+void draw() 
+      {
+        background(149,195,241);
+        Img = loadImage("imagen.jpg");
+        Img.resize(200,180);
+        image(Img,x,y);
+      }
+void keyPressed(){
+    if (key == 'a'){
+        x -= 10;
+    }
+    if (key == 'd'){
+        x+= 5;
+    }
+    if (key == 'w'){
+        y -= 5;
+    }
+    if (key == 's'){
+        y+= 5;
+    }
+ }
+ 
+ 
+ </script>
+<canvas></canvas>
+</body>
+</html>

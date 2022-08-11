@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Processing</title>
+    <script src="processing.js"></script>
+  </head>
+  <body>
+    
+    <script type="text/processing">
+    int FX=640;
+int FY=180;
+int ban=0;
+int bann=0;
+int r=0,g=0,b=0;
+void setup()
+{
+        size(640, 360);
+}
+void draw() 
+      {
+       stroke(r,g,b);
+        line(320,180,FX,FY);
+        
+        if (ban==0){
+           FY+=10; 
+        }
+        if (FY==360){
+          ban=1;
+        }
+        if (ban==1){
+           FX-=10;
+           
+        }
+        if (FX==0 && FY==360){
+          ban=2;
+        }
+        if (ban==2){
+           FY-=10; 
+        }
+        if(FX==0 && FY==0){
+          ban=3;
+        }
+        if (ban==3){
+          FX+=10;
+        }
+        if (FX==640 && FY==0){
+          ban=0;
+        }
+ if (bann==0){
+   b-=10;
+   r+=10;
+ }
+ if (r>=255){
+   bann=1;
+ }
+if (bann==1){
+   r-=10;
+   g+=10;
+ }
+ if (g>=255){
+   bann=2;
+ }
+ if (bann==2){
+   g-=10;
+   b+=10;
+ }
+ 
+ if (b>=255){
+   bann=0;
+ }
+
+        
+      }
+ </script>
+<canvas></canvas>
+</body>
+</html>
